@@ -16,47 +16,71 @@
     </nav>
 </header>
 <body>
-    <div class="container">
-        <h2>Ice Cream Order Form</h2>
-        <div class="form-container">
-            <form id="iceCreamForm">
-                <div class="form-group">
-                    <label for="coneOrCup">Choose Cone or Cup:</label>
-                    <select id="coneOrCup" name="coneOrCup" class="form-control" required>
-                        <option value="cone">Cone</option>
-                        <option value="cup">Cup</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="scoops">Number of Scoops:</label>
-                    <input type="number" id="scoops" name="scoops" min="1" value="1" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label>Toppings:</label>
-                    <div class="form-check">
-                        <input type="checkbox" id="sprinkles" name="topping" value="0.50" class="form-check-input">
-                        <label for="sprinkles" class="form-check-label">Sprinkles ($0.50)</label>
+    <body>
+        <!-- Container for the entire form -->
+        <div class="container">
+            <!-- Heading for the form -->
+            <h2>Ice Cream Order Form</h2>
+            <!-- Container for the form elements -->
+            <div class="form-container">
+                <!-- Form element with id "iceCreamForm" -->
+                <form id="iceCreamForm">
+                    <!-- Form group for selecting cone or cup -->
+                    <div class="form-group">
+                        <label for="coneOrCup">Choose Cone or Cup:</label>
+                        <!-- Dropdown menu to select cone or cup -->
+                        <select id="coneOrCup" name="coneOrCup" class="form-control" required>
+                            <!-- Option for cone -->
+                            <option value="cone">Cone</option>
+                            <!-- Option for cup -->
+                            <option value="cup">Cup</option>
+                        </select>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" id="hotfudge" name="topping" value="1.25" class="form-check-input">
-                        <label for="hotfudge" class="form-check-label">Hot Fudge ($1.25)</label>
+                    <!-- Form group for entering number of scoops -->
+                    <div class="form-group">
+                        <label for="scoops">Number of Scoops:</label>
+                        <!-- Input field to enter number of scoops -->
+                        <input type="number" id="scoops" name="scoops" min="1" value="1" class="form-control" required>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" id="whippedcream" name="topping" value="0.25" class="form-check-input">
-                        <label for="whippedcream" class="form-check-label">Whipped Cream ($0.25)</label>
+                    <!-- Form group for selecting toppings -->
+                    <div class="form-group">
+                        <label>Toppings:</label>
+                        <!-- Checkbox and label for Sprinkles -->
+                        <div class="form-check">
+                            <input type="checkbox" id="sprinkles" name="topping" value="0.50" class="form-check-input">
+                            <label for="sprinkles" class="form-check-label">Sprinkles ($0.50)</label>
+                        </div>
+                        <!-- Checkbox and label for Hot Fudge -->
+                        <div class="form-check">
+                            <input type="checkbox" id="hotfudge" name="topping" value="1.25" class="form-check-input">
+                            <label for="hotfudge" class="form-check-label">Hot Fudge ($1.25)</label>
+                        </div>
+                        <!-- Checkbox and label for Whipped Cream -->
+                        <div class="form-check">
+                            <input type="checkbox" id="whippedcream" name="topping" value="0.25" class="form-check-input">
+                            <label for="whippedcream" class="form-check-label">Whipped Cream ($0.25)</label>
+                        </div>
+                        <!-- Checkbox and label for Cherry -->
+                        <div class="form-check">
+                            <input type="checkbox" id="cherry" name="topping" value="0.25" class="form-check-input">
+                            <label for="cherry" class="form-check-label">Cherry ($0.25)</label>
+                        </div>
+                        <!-- Checkbox and label for Nuts -->
+                        <div class="form-check">
+                            <input type="checkbox" id="Nuts" name="topping" value="0.25" class="form-check-input">
+                            <label for="Nuts" class="form-check-label">Nuts($0.25)</label>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" id="cherry" name="topping" value="0.25" class="form-check-input">
-                        <label for="cherry" class="form-check-label">Cherry ($0.25)</label>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary" onclick="calculateOrder()">Submit Order</button>
-            </form>
+                    <!-- Button to submit the order -->
+                    <button type="button" class="btn btn-primary" onclick="calculateOrder()">Submit Order</button>
+                </form>
+            </div>
+    
+            <!-- Container for displaying order summary -->
+            <div id="orderSummary" class="summary-container"></div>
         </div>
-
-        <div id="orderSummary" class="summary-container"></div>
-    </div>
-
-    <script src="icecream.js"></script>
-</body>
+    
+        <!-- JavaScript file for calculating the order -->
+        <script src="icecream.js"></script>
+    </body>
 </html>
